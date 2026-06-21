@@ -46,35 +46,59 @@
         }
     }
 
+     /* IMPORTANT : On force le fichier HTML et le body à occuper 100% de la frame */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Évite les doubles barres de défilement inutiles */
+        }
+
+        /* Le nav prend 100% de la hauteur de la frame (qui vaut déjà 20% du frameset) */
+        .nav-fullscreen {
+            height: 100% !important;
+            width: 100%;
+            background: #211147;
+        }
+
+        /* Ajustement des images pour qu'elles s'adaptent à la hauteur de la frame */
+        .logo-img {
+            max-height: 85% !important; /* Elles occuperont au max 85% des 20% de la frame */
+            max-width: 90px;
+            width: 100%;
+            object-fit: contain;
+        }
+
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-dark sticky-top py-2 mt-1" style="background: #211147; width: 100%;">
-    <div class="container-fluid row align-items-center m-0 p-0">
-        
-        <div class="col-3 text-start ps-3">
-            <a href="https://www.uac.bj/" title="UAC" target="_blank" class="d-inline-block">
-                <img src="images/uac.png" class="img-fluid" style="max-height: 80px; max-width: 90px; width: 100%; object-fit: contain;" alt="uac">
-            </a>
-        </div>
 
-        <div class="col-6 text-center px-1">
-            <div class="navbar-brand fw-bold m-0 text-wrap welcome" style="font-size: calc(0.9rem + 0.4vw); line-height: 1.2;">
-                Bienvenue sur mon site
+    <nav class="navbar navbar-expand navbar-dark nav-fullscreen d-flex align-items-center m-0 p-0">
+        <div class="container-fluid row align-items-center m-0 p-0 w-100 h-100">
+            
+            <div class="col-3 text-start ps-3 h-100 d-flex align-items-center">
+                <a href="https://www.uac.bj/" title="UAC" target="_blank" class="d-inline-block">
+                    <img src="images/uac.png" class="img-fluid logo-img" alt="uac">
+                </a>
             </div>
-            <a class="nav-link text-white m-0 nom text-wrap d-block" href="#description" target="zone" style="font-size: calc(0.75rem + 0.2vw); opacity: 0.9;">
-                KASSIGNIN Noél Olayinka Jonathan
-            </a>
-        </div>
 
-        <div class="col-3 text-end pe-3">
-            <a href="https://eneam.uac.bj/" title="ENEAM" target="_blank" class="d-inline-block">
-                <img src="images/eneam.png" class="img-fluid" style="max-height: 80px; max-width: 90px; width: 100%; object-fit: contain;" alt="eneam">
-            </a>
-        </div>
+            <div class="col-6 text-center px-1">
+                <div class="navbar-brand fw-bold m-0 text-wrap welcome" style="font-size: calc(0.9rem + 0.4vw); line-height: 1.2;">
+                    Bienvenue sur mon site
+                </div>
+                <a class="nav-link text-white m-0 nom text-wrap d-block" href="#description" target="zone" style="font-size: calc(0.75rem + 0.2vw); opacity: 0.9;">
+                    KASSIGNIN Noél Olayinka Jonathan
+                </a>
+            </div>
 
-    </div>
-</nav>
+            <div class="col-3 text-end pe-3 h-100 d-flex align-items-center justify-content-end">
+                <a href="https://eneam.uac.bj/" title="ENEAM" target="_blank" class="d-inline-block">
+                    <img src="images/eneam.png" class="img-fluid logo-img" alt="eneam">
+                </a>
+            </div>
+
+        </div>
+    </nav>
     <nav class="container my-4">
         <ol type="I">
             <li class="nav-item fs-2" style="color: #6f42c1;">Ma description</li>
