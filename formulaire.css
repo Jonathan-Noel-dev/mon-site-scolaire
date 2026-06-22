@@ -1,6 +1,4 @@
-/* ==========================================
-   STYLE GÉNÉRAL ET TYPOGRAPHIE
-   ========================================== */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
@@ -21,9 +19,6 @@ body > p {
     padding-left: 10px;
 }
 
-/* ==========================================
-   DESIGN DES FORMULAIRES
-   ========================================== */
 form {
     background: #ffffff;
     padding: 20px;
@@ -33,20 +28,16 @@ form {
     border: 1px solid #e2e8f0;
 }
 
-/* Paragraphes internes aux formulaires */
 form p {
     margin: 12px 0;
 }
 
-/* En-têtes et textes informatifs internes */
+
 form p:first-child {
     font-weight: 500;
     color: #2d3748;
 }
 
-/* ==========================================
-   CHAMPS DE SAISIE (TEXTE, PASSWORD, SELECT, TEXTAREA)
-   ========================================== */
 input[type="text"],
 input[type="password"],
 select,
@@ -76,30 +67,27 @@ textarea:focus {
     outline: none;
 }
 
-/* Ajustement spécifique pour les zones de texte */
+
 textarea {
     min-height: 80px;
-    resize: vertical; /* Permet à l'étudiant d'agrandir verticalement */
+    resize: vertical; 
 }
 
-/* ==========================================
-   LABELS, CASES À COCHER ET BOUTONS RADIO
-   ========================================== */
+
 label {
     font-weight: 600;
     color: #4a5568;
 }
 
-/* Alignement des cases à cocher et boutons radio */
 input[type="checkbox"],
 input[type="radio"] {
     margin-right: 8px;
     cursor: pointer;
-    transform: scale(1.1); /* Rend les cases légèrement plus visibles */
+    transform: scale(1.1); 
     vertical-align: middle;
 }
 
-/* Ajustement des labels placés juste après une case/un radio */
+
 input[type="checkbox"] + label,
 input[type="radio"] + label {
     font-weight: normal;
@@ -108,12 +96,10 @@ input[type="radio"] + label {
     vertical-align: middle;
 }
 
-/* ==========================================
-   FIELDSET ET LEGEND (ORGANISATION)
-   ========================================== */
+
 fieldset {
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    border: 1px solid #ecf0f5;
+    border-radius: 0;
     padding: 15px 20px;
     margin-bottom: 20px;
     background-color: #f8fafc;
@@ -129,9 +115,7 @@ legend {
     font-size: 14px;
 }
 
-/* ==========================================
-   BOUTONS DE SOUUMISSION (SUBMIT / RESET)
-   ========================================== */
+
 input[type="submit"],
 input[type="reset"] {
     padding: 10px 20px;
@@ -144,7 +128,7 @@ input[type="reset"] {
     border: none;
 }
 
-/* Bouton Envoyer (Principal) */
+
 input[type="submit"] {
     background-color: #3182ce;
     color: white;
@@ -154,7 +138,6 @@ input[type="submit"]:hover {
     background-color: #2b6cb0;
 }
 
-/* Bouton Annuler/Reset (Secondaire) */
 input[type="reset"] {
     background-color: #e2e8f0;
     color: #4a5568;
