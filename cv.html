@@ -3,40 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV</title>
+    <title>CV — KASSIGNIN Noel Olayinka Jonathan</title>
+    <link class="img-fluid" rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <style>
         body {
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 40px 20px;
+            background-color: #f1f3f7;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: #333333;
+        }
+        
+        .cv-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .cv-header {
+            background: linear-gradient(135deg, #0b3c7c, #1a4a8e);
+            padding: 3rem 2rem;
+        }
+
+        .photo-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: #0b3c7c;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
             display: flex;
-            justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            gap: 0.5rem;
         }
 
-        .cv-container {
-            max-width: 800px;
-            width: 100%;
-            background: #ffffff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 2px;
+            background-color: rgba(11, 60, 124, 0.15);
         }
 
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px;
+        .cv-sidebar {
+            background-color: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+            height: 100%;
+        }
+
+        .custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+
+        .custom-list li::before {
+            content: "➔";
+            color: #0b3c7c;
+            position: absolute;
+            left: 0;
+            font-size: 0.85rem;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: #495057;
+            transition: color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: #0b3c7c;
+        }
+
+        .education-item {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid #e9ecef;
+            padding-bottom: 1.5rem;
+        }
+
+        .education-item:last-child {
+            padding-bottom: 0;
+            border-left: 2px solid transparent;
+        }
+
+        .education-marker {
+            position: absolute;
+            left: -6px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #0b3c7c;
         }
     </style>
 </head>
 <body>
 
-    <div class="cv-container">
-        <img src="images/cv.png" alt="Mon CV">
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-10 shadow-lg cv-card">
+            
+            <div class="row cv-header align-items-center">
+                <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+                    <div class="photo-container">
+                        <img src="images/jojo.png" alt="Jonathan KASSIGNIN" class="rounded-circle">
+                    </div>
+                </div>
+                <div class="col-md-9 text-center text-md-start text-white">
+                    <h1 class="fw-bold mb-1 tracking-tight" style="font-size: 2.5rem; letter-spacing: -0.5px;">
+                        Noël Olayinka Jonathan <span class="text-uppercase" style="font-weight: 800;">Kassignin</span>
+                    </h1>
+                    <div class="badge bg-white text-primary px-3 py-2 rounded-pill fw-semibold fs-6 mt-2">
+                        Développeur Full-Stack (Django & Front-End)
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-0">
+                
+                <div class="col-md-4 cv-sidebar p-4">
+                    
+                    <div class="mb-4">
+                        <h3 class="section-title text-uppercase" style="font-size: 0.95rem;">Coordonnées</h3>
+                        <ul class="list-unstyled lh-lg small text-secondary">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2 fs-5"></i>
+                                <span>Calavi, Bénin</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-envelope text-primary me-2 fs-5"></i>
+                                <a href="mailto:kassigninjonathan@gmail.com" class="contact-link">kassigninjonathan@gmail.com</a>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-telephone text-primary me-2 fs-5"></i>
+                                <a href="tel:+2290196233461" class="contact-link">+229 01 96 23 34 61</a>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-github text-primary me-2 fs-5"></i>
+                                <a href="https://github.com/Jonathan-Noel-dev" target="_blank" class="contact-link">Jonathan-Noel-dev</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="section-title text-uppercase" style="font-size: 0.95rem;">Langues</h3>
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between small fw-medium mb-1">
+                                <span>Français</span>
+                                <span class="text-muted">Courant</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar bg-primary" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between small fw-medium mb-1">
+                                <span>Anglais</span>
+                                <span class="text-muted">50%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar bg-primary" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between small fw-medium mb-1">
+                                <span>Nago</span>
+                                <span class="text-muted">100%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between small fw-medium mb-1">
+                                <span>Fon</span>
+                                <span class="text-muted">50%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar bg-primary" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="section-title text-uppercase" style="font-size: 0.95rem;">Certifications</h3>
+                        <p class="text-muted small fw-bold mb-2">SoloLearn</p>
+                        <ul class="custom-list small">
+                            <li>Python</li>
+                            <li>Langage C</li>
+                            <li>Développement Web (HTML, CSS, JS)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="section-title text-uppercase" style="font-size: 0.95rem;">Intérêts</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-white border text-dark">Informatique</span>
+                            <span class="badge bg-white border text-dark">Lecture</span>
+                            <span class="badge bg-white border text-dark">Art & Design</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-8 p-4 bg-white">
+                    
+                    <section class="mb-4">
+                        <h2 class="section-title">À Propos de moi</h2>
+                        <p class="text-secondary small lh-base" style="text-align: justify;">
+                            Né en 2008, je suis un développeur Web Full-Stack junior passionné par la création d'applications web modernes et performantes. Spécialisé en développement Front-End et Back-End avec Django, j'aime concevoir des architectures propres, apprendre de nouvelles technologies et relever des défis techniques stimulants.
+                        </p>
+                    </section>
+
+                    <section class="mb-4">
+                        <h2 class="section-title">Expériences Professionnelles</h2>
+                        <div class="mb-3">
+                            <h5 class="fw-bold mb-1" style="color: #0b3c7c;">Développeur Full-Stack Junior</h5>
+                            <ul class="custom-list small">
+                                <li>Conception et développement en cours d'une application de messagerie en temps réel (Django & Bootstrap).</li>
+                                <li>Création et programmation de plusieurs mini-jeux et sites web interactifs (Vanilla JS, CSS3, HTML5).</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-3 rounded-3 mt-3">
+                            <h6 class="fw-bold text-dark mb-2">Compétences Techniques Monopolisées</h6>
+                            <div class="row g-2 small border-bottom pb-2 mb-2">
+                                <div class="col-6"><i class="bi bi-check2 text-primary me-2"></i>Django & Python</div>
+                                <div class="col-6"><i class="bi bi-check2 text-primary me-2"></i>HTML5, CSS3 & JavaScript</div>
+                                <div class="col-6"><i class="bi bi-check2 text-primary me-2"></i>Framework Bootstrap</div>
+                                <div class="col-6"><i class="bi bi-check2 text-primary me-2"></i>CMS (WordPress & Joomla)</div>
+                                <div class="col-12"><i class="bi bi-check2 text-primary me-2"></i>Design UI/UX (Canva)</div>
+                            </div>
+                            <h6 class="fw-bold text-dark mb-2">Administrateur Linux</h6>
+                            <div class="row g-2 small">
+                                <div class="col-12"><i class="bi bi-terminal text-primary me-2"></i>Ligne de commande Linux</div>
+                                <div class="col-12"><i class="bi bi-terminal text-primary me-2"></i>Administration système de base</div>
+                                <div class="col-12"><i class="bi bi-terminal text-primary me-2"></i>Scripting Bash</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Parcours Académique</h2>
+                        
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                <h5 class="fw-bold mb-0 small-title" style="color: #0b3c7c; font-size: 1rem;">ENEAM / UAC</h5>
+                                <span class="badge bg-light text-primary border border-primary-subtle">2025 - 2026</span>
+                            </div>
+                            <p class="text-secondary small mb-0">Première année en Analyse Informatique et Programmation</p>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                <h5 class="fw-bold mb-0" style="color: #0b3c7c; font-size: 1rem;">La Grande Académie</h5>
+                                <span class="badge bg-light text-secondary border">2024 - 2025</span>
+                            </div>
+                            <p class="text-secondary small mb-0">Baccalauréat Scientifique (Série D)</p>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                <h5 class="fw-bold mb-0" style="color: #0b3c7c; font-size: 1rem;">CEG Ottola</h5>
+                                <span class="badge bg-light text-secondary border">2021 - 2022</span>
+                            </div>
+                            <p class="text-secondary small mb-0">Brevet d'Études du Premier Cycle (BEPC)</p>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                <h5 class="fw-bold mb-0" style="color: #0b3c7c; font-size: 1rem;">Complexe Scolaire Protestant</h5>
+                                <span class="badge bg-light text-secondary border">2017 - 2018</span>
+                            </div>
+                            <p class="text-secondary small mb-0">Certificat d'Études Primaires (CEP)</p>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
