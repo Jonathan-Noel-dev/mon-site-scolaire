@@ -49,7 +49,7 @@ p /* Tous les paragraphes auront ces propriétés CSS */{
     width: 250px;
     height: 100px;
     text-align: justify;
-}/* Et chacun des paragraphes aura en plus une valeur d'overflow différente */
+}
 .coupe{
     overflow: hidden;
 }
@@ -75,8 +75,7 @@ list-style-type: upper-roman;
 {
 list-style-type: lower-greek;
 }
-/* Quelques styles supplémentaires juste pour la présentation
-En plus ça vous fait quelques rappels ;o) */
+
 h2
 {
 text-indent: 20px;
@@ -93,9 +92,7 @@ color: red;
 
 
 
-/* ==========================================
-   STYLE GÉNÉRAL ET DESIGN DE LA PAGE
-   ========================================== */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7fafc;
@@ -121,17 +118,17 @@ p {
     margin-bottom: 8px;
 }
 
-/* Style pour mettre en valeur les balises citées dans le texte (em, strong) */
+
 p em, p strong {
-    background-color: #edf2f7;
     padding: 2px 6px;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
-    color: #e53e3e;
+    color: black;
+    font-weight:bold;
     font-style: normal;
 }
 
-/* Container global fictif pour espacer proprement chaque exemple */
+
 ul, ol, dl {
     background: #ffffff;
     padding: 20px 40px;
@@ -145,9 +142,7 @@ li {
     margin-bottom: 8px;
 }
 
-/* ==========================================
-   DESIGN DES LISTES DE DÉFINITIONS (<dl>)
-   ========================================== */
+
 dl {
     padding: 20px;
 }
@@ -168,23 +163,18 @@ dd {
     padding-left: 10px;
 }
 
-/* ==========================================
-   GESTION DES RETRAITS (CLASSES HTML)
-   ========================================== */
+
 ul.retrait {
     /* Garde le comportement avec retrait par défaut de la structure */
     padding-left: 40px; 
 }
 
 ul.pas_de_retrait {
-    /* Supprime le décalage vers la droite */
     padding-left: 15px; 
-    list-style-position: inside; /* Aligne la puce tout à gauche avec le texte */
+    list-style-position: inside; 
 }
 
-/* ==========================================
-   STYLISATION DES LISTES NON ORDONNÉES (ul)
-   ========================================== */
+
 ul.cercle {
     list-style-type: circle;
 }
@@ -195,12 +185,9 @@ ul.carre {
 
 ul.rien {
     list-style-type: none;
-    padding-left: 20px; /* Réduit l'espace vide vu qu'il n'y a plus de puces */
+    padding-left: 20px; 
 }
 
-/* ==========================================
-   STYLISATION DES LISTES ORDONNÉES (ol)
-   ========================================== */
 ol.commence_a_zero {
     list-style-type: decimal-leading-zero;
 }
@@ -215,4 +202,17 @@ ol.chiffres_romains {
 
 ol.lettres_grecques {
     list-style-type: lower-greek;
+}
+
+.ul li{
+    list-style: none;
+}
+.ul li::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url(images/puce.png);
+    background-size: cover;
+    display: inline-block;
+    margin-right: 8px;
 }
