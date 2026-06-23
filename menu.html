@@ -4,44 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <style>
         body{
             background-color: black;
-            margin-left: -31px;
-            transition: all 1s ease;
+            margin: 0;
         }
+
+        /* MENU */
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+
         ul li{
             list-style: none;
-            padding: 1.3rem 0;
-            margin: -18px 0px;
-            padding-left: 10px;
+            margin: 0;
+            padding: 0;
+            
         }
         hr{
-            margin-left: -10px;
+            margin: 0;
         }
+        li a{
+            display: block;
+            width: 100%;
+            padding: 1.3rem 10px;
+            color: white;
+            text-decoration: none;
+        }
+
         li:hover{
-            background:rgba(77, 76, 76, 0.2);
-            height: 100%;
+            background: rgba(77, 76, 76, 0.2);
+        }
+
+        /* actif */
+        li.active{
+            background-color: blue;
         }
     </style>
 </head>
+
 <body>
-    <nav class="text-white w-100">
-        <div class="nav-header text-center">
-            <h5 class="mb-4 ps-2 mt-5" style="color: #5005ff;">Menu</h5>
-        </div>
-        <ul class="d-flex flex-column justify-content-start"><hr>
-            <li><a class="text-light nav-link" href="page.html" title="Aller vers mon site" target="zone">Page1</a></li><hr>
-            <li><a class="text-light nav-link"  href="tp1.html" target="zone">tp1</a></li><hr>
-            <li><a class="text-light nav-link"  href="tp2.html" target="zone">tp2</a></li><hr>
-            <li><a class="text-light nav-link" href="liste.html" target="zone">Liste</a></li><hr>
-            <li><a class="nav-link text-light " href="formulaire.html" target="zone">formulaire</a></li><hr>
-            <li><a class="nav-link text-light " href="tableau.html" target="zone">Tableau</a></li><hr>
-            <li><a class="nav-link text-light " href="TP_tableau.html" target="zone">TP Tableau</a></li><hr>
-            <li><a class="nav-link text-light " href="cv.html" target="zone">Mon cv</a></li><hr>
-        </ul>
-    </nav>
-    <script src="js/bootstrap.bundle.min.js"></script> 
+
+<nav class="text-white w-100">
+    <div class="text-center py-3">
+        <h5 style="color:#5005ff;">Menu</h5>
+    </div>
+
+    <ul><hr>
+        <li><a href="page.html" target="zone">Page1</a></li><hr>
+        <li><a href="tp1.html" target="zone">tp1</a></li><hr>
+        <li><a href="tp2.html" target="zone">tp2</a></li><hr>
+        <li><a href="liste.html" target="zone">Liste</a></li><hr>
+        <li><a href="formulaire.html" target="zone">Formulaire</a></li><hr>
+        <li><a href="tableau.html" target="zone">Tableau</a></li><hr>
+        <li><a href="TP_tableau.html" target="zone">TP Tableau</a></li><hr>
+        <li><a href="cv.html" target="zone">Mon CV</a></li><hr>
+    </ul>
+</nav>
+
+<script>
+let liens = document.querySelectorAll('li a');
+let li = document.querySelectorAll('li');
+
+liens.forEach(lien => {
+    lien.addEventListener('click', colorer);
+});
+
+function colorer(){
+    li.forEach(el => el.style.backgroundColor = "black");
+    this.parentElement.style.backgroundColor = "blue";
+}
+</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
